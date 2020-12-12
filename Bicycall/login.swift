@@ -17,9 +17,13 @@ class login: UIViewController {
     var password:String?
     var phone:String?
     
+    var u = ConnectedUser()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.DeleteAllData()
         // Do any additional setup after loading the view.
     }
     
@@ -88,20 +92,25 @@ class login: UIViewController {
                     print(data)
                     let user = try JSONDecoder().decode(User.self, from: data)
                    
-                    self.id = user.user_id
-                    self.name = user.name
-                    self.lastname = user.lastname
-                    self.email = user.email
-                    self.password = user.password
-                    self.phone = user.phone
-                    
                     DispatchQueue.main.async {
                         
+                        self.id = user.user_id
+                        self.name = user.name
+                        self.lastname = user.lastname
+                        self.email = user.email
+                        self.password = user.password
+                        self.phone = user.phone
+                        
+                        print(self.id!)
+                        print(self.email!)
                         
                         
                         if(user.user_id != 0){
-                            //self.saveUser(user)
+                           
+                            self.saveUser()
+                            self.DisplayConnectedUser()
                            self.performSegue(withIdentifier: "HomeSegue", sender: "nil")
+                            
                         }else{
                         
                             let alert = UIAlertController(title: "Login Failed", message: "Wrong credentials", preferredStyle: .alert)
@@ -122,10 +131,24 @@ class login: UIViewController {
         }.resume()
         
         
-    
     }
     
     
+    func DeleteAllData(){
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "Users"))
+        do {
+            try managedContext.execute(DelAllReqVar)
+        }
+        catch {
+            print(error)
+        }
+    }
+
+    
+
     func saveUser() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -134,27 +157,27 @@ class login: UIViewController {
         let managedContext = persistentContainer.viewContext
         
         let entityDescription = NSEntityDescription.entity(forEntityName: "Users" ,  in: managedContext)
-             let object = NSManagedObject(entity: entityDescription , insertInto: managedContext )
-                  object.setValue(value: id!  ,  forKey: "user_id"  )
-                  object.setValue(value: email!  ,  forKey: "email"  )
-                  object.setValue(value: password!  ,  forKey: "password"  )
-                  object.setValue(value: name!  ,  forKey: "name"  )
-                  object.setValue(value: lastname!  ,  forKey: "lastname"  )
-                  object.setValue(value: phone!  ,  forKey: "phone"  )
+        let object = NSManagedObject(entity: entityDescription! , insertInto: managedContext )
+        object.setValue(id!  ,  forKey: "user_id"  )
+        object.setValue(email!  ,  forKey: "email"  )
+        object.setValue(password!  ,  forKey: "password"  )
+        object.setValue(name!  ,  forKey: "name"  )
+        object.setValue(lastname!  ,  forKey: "lastname"  )
+        object.setValue(phone!  ,  forKey: "phone"  )
         
-                  
                   do {
                   
                  try managedContext.save()
                    print("INSERT SUCCESSFULLY")
+                print(id!)
                    }
                    catch  {
                    print("INSERT ERROR")
                    }
         
-        
     }
     
+
     
     
     @IBAction func btnSignup(_ sender: Any) {
@@ -167,4 +190,49 @@ class login: UIViewController {
 
     
     
+    func DisplayConnectedUser() {
+            
+             let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                //represente l'ORM
+                let persistentContainer = appDelegate.persistentContainer
+                
+                let managedContext = persistentContainer.viewContext     //retourne NSManagedObject toujours
+                
+                //la requete retourne un NSManagedObject
+                let request = NSFetchRequest<NSManagedObject>(entityName :   "Users")
+                
+                //execution de la requete
+                do {
+                
+                    let result = try  managedContext.fetch(request)
+                for item in result {
+                    print(item.value(forKey: "user_id") as! Int )
+                    print(item.value(forKey: "email")  as! String)
+                    self.u.user_id  = (item.value(forKey: "user_id")  as! Int)
+                    self.u.email = (item.value(forKey: "email")  as! String)
+                    self.u.password = (item.value(forKey: "password")  as! String)
+                    self.u.name = (item.value(forKey: "name")  as! String)
+                    self.u.lastname = (item.value(forKey: "lastname")  as! String)
+                    self.u.phone = (item.value(forKey: "phone")  as! String)
+                   
+                    print(self.u.user_id!)
+                    print(self.u.email!)
+                    print(self.u.password!)
+                    print(self.u.name!)
+                    print(self.u.lastname!)
+                    print(self.u.phone!)
+                  
+                }
+                
+                   }
+                   catch {
+                   print("NO DATA FOUND , Error")
+                   }
+
+
+        }
+    
+    
+    
+
 }
