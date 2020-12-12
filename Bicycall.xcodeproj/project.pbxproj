@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35A8F27C72A44C07D62090B7 /* Pods_Bicycall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899B1BA4D9682686062F6DE9 /* Pods_Bicycall.framework */; };
+		6266F4D8258264EE0001A25A /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266F4D7258264EE0001A25A /* UpdateViewController.swift */; };
+		6273FCAD2582AEB80067DA99 /* BikeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */; };
+		6273FCB02582BF6D0067DA99 /* RentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */; };
+		6273FCB32582CCB40067DA99 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCB22582CCB40067DA99 /* ContactViewController.swift */; };
+		6C665643257F70A100E61BE1 /* myMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C665642257F70A100E61BE1 /* myMapViewController.swift */; };
+		6C8011A52576F51500C2A364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011A42576F51500C2A364 /* AppDelegate.swift */; };
+		6C8011A72576F51500C2A364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011A62576F51500C2A364 /* SceneDelegate.swift */; };
+		6C8011A92576F51500C2A364 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011A82576F51500C2A364 /* ViewController.swift */; };
+		6C8011AC2576F51500C2A364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8011AA2576F51500C2A364 /* Main.storyboard */; };
+		6C8011AE2576F51F00C2A364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8011AD2576F51F00C2A364 /* Assets.xcassets */; };
+		6C8011B12576F51F00C2A364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8011AF2576F51F00C2A364 /* LaunchScreen.storyboard */; };
+		6C8011BA2577081100C2A364 /* signupVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011B92577081100C2A364 /* signupVCViewController.swift */; };
+		6C8011BD2577269C00C2A364 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011BC2577269C00C2A364 /* login.swift */; };
+		6C93BBF62577A9B800B47F14 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93BBF52577A9B800B47F14 /* RentViewController.swift */; };
+		6C93BBF92577ABEF00B47F14 /* BikelistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93BBF82577ABEF00B47F14 /* BikelistViewController.swift */; };
+		6C93BBFC2577AC4600B47F14 /* rentlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93BBFB2577AC4600B47F14 /* rentlistViewController.swift */; };
+		6CDF25562577918F00984F45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF25552577918F00984F45 /* User.swift */; };
+		6CEDCC1B2578E5F5009847AA /* Bicycall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDCC192578E5F5009847AA /* Bicycall.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6266F4D7258264EE0001A25A /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetailsViewController.swift; sourceTree = "<group>"; };
+		6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailsViewController.swift; sourceTree = "<group>"; };
+		6273FCB22582CCB40067DA99 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		6C665642257F70A100E61BE1 /* myMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myMapViewController.swift; sourceTree = "<group>"; };
+		6C8011A12576F51500C2A364 /* Bicycall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bicycall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8011A42576F51500C2A364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C8011A62576F51500C2A364 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6C8011A82576F51500C2A364 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C8011AB2576F51500C2A364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C8011AD2576F51F00C2A364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C8011B02576F51F00C2A364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C8011B22576F51F00C2A364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8011B92577081100C2A364 /* signupVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupVCViewController.swift; sourceTree = "<group>"; };
+		6C8011BC2577269C00C2A364 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		6C93BBF52577A9B800B47F14 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
+		6C93BBF82577ABEF00B47F14 /* BikelistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikelistViewController.swift; sourceTree = "<group>"; };
+		6C93BBFB2577AC4600B47F14 /* rentlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rentlistViewController.swift; sourceTree = "<group>"; };
+		6CDF25552577918F00984F45 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6CEDCC1A2578E5F5009847AA /* Bicycall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bicycall.xcdatamodel; sourceTree = "<group>"; };
+		7BD801579FD4E79209F16C24 /* Pods-Bicycall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bicycall.debug.xcconfig"; path = "Target Support Files/Pods-Bicycall/Pods-Bicycall.debug.xcconfig"; sourceTree = "<group>"; };
+		899B1BA4D9682686062F6DE9 /* Pods_Bicycall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bicycall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A932F21BE77DA16AA77E10 /* Pods-Bicycall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bicycall.release.xcconfig"; path = "Target Support Files/Pods-Bicycall/Pods-Bicycall.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C80119E2576F51500C2A364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35A8F27C72A44C07D62090B7 /* Pods_Bicycall.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AA5CFA16F265B7399ECAB11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BD801579FD4E79209F16C24 /* Pods-Bicycall.debug.xcconfig */,
+				E4A932F21BE77DA16AA77E10 /* Pods-Bicycall.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C8011982576F51500C2A364 = {
+			isa = PBXGroup;
+			children = (
+				6C8011A32576F51500C2A364 /* Bicycall */,
+				6C8011A22576F51500C2A364 /* Products */,
+				2AA5CFA16F265B7399ECAB11 /* Pods */,
+				787E1F48CE2B5984452FD340 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6C8011A22576F51500C2A364 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C8011A12576F51500C2A364 /* Bicycall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C8011A32576F51500C2A364 /* Bicycall */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF25542577910500984F45 /* models */,
+				6266F4D7258264EE0001A25A /* UpdateViewController.swift */,
+				6C8011A42576F51500C2A364 /* AppDelegate.swift */,
+				6C8011A62576F51500C2A364 /* SceneDelegate.swift */,
+				6C8011A82576F51500C2A364 /* ViewController.swift */,
+				6C8011AA2576F51500C2A364 /* Main.storyboard */,
+				6C8011AD2576F51F00C2A364 /* Assets.xcassets */,
+				6C8011AF2576F51F00C2A364 /* LaunchScreen.storyboard */,
+				6C8011B22576F51F00C2A364 /* Info.plist */,
+				6C8011B92577081100C2A364 /* signupVCViewController.swift */,
+				6C8011BC2577269C00C2A364 /* login.swift */,
+				6C93BBF52577A9B800B47F14 /* RentViewController.swift */,
+				6C93BBF82577ABEF00B47F14 /* BikelistViewController.swift */,
+				6C93BBFB2577AC4600B47F14 /* rentlistViewController.swift */,
+				6CEDCC192578E5F5009847AA /* Bicycall.xcdatamodeld */,
+				6C665642257F70A100E61BE1 /* myMapViewController.swift */,
+				6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */,
+				6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */,
+				6273FCB22582CCB40067DA99 /* ContactViewController.swift */,
+			);
+			path = Bicycall;
+			sourceTree = "<group>";
+		};
+		6CDF25542577910500984F45 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF25552577918F00984F45 /* User.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		787E1F48CE2B5984452FD340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				899B1BA4D9682686062F6DE9 /* Pods_Bicycall.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C8011A02576F51500C2A364 /* Bicycall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C8011B52576F51F00C2A364 /* Build configuration list for PBXNativeTarget "Bicycall" */;
+			buildPhases = (
+				D6EC18EB34C24779C8EE89FA /* [CP] Check Pods Manifest.lock */,
+				6C80119D2576F51500C2A364 /* Sources */,
+				6C80119E2576F51500C2A364 /* Frameworks */,
+				6C80119F2576F51500C2A364 /* Resources */,
+				826830F57BC59938BF633C9E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bicycall;
+			productName = Bicycall;
+			productReference = 6C8011A12576F51500C2A364 /* Bicycall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C8011992576F51500C2A364 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					6C8011A02576F51500C2A364 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 6C80119C2576F51500C2A364 /* Build configuration list for PBXProject "Bicycall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C8011982576F51500C2A364;
+			productRefGroup = 6C8011A22576F51500C2A364 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C8011A02576F51500C2A364 /* Bicycall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C80119F2576F51500C2A364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8011B12576F51F00C2A364 /* LaunchScreen.storyboard in Resources */,
+				6C8011AE2576F51F00C2A364 /* Assets.xcassets in Resources */,
+				6C8011AC2576F51500C2A364 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		826830F57BC59938BF633C9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bicycall/Pods-Bicycall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bicycall/Pods-Bicycall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bicycall/Pods-Bicycall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6EC18EB34C24779C8EE89FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bicycall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C80119D2576F51500C2A364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CEDCC1B2578E5F5009847AA /* Bicycall.xcdatamodeld in Sources */,
+				6C8011A92576F51500C2A364 /* ViewController.swift in Sources */,
+				6C93BBF62577A9B800B47F14 /* RentViewController.swift in Sources */,
+				6C8011BD2577269C00C2A364 /* login.swift in Sources */,
+				6C665643257F70A100E61BE1 /* myMapViewController.swift in Sources */,
+				6CDF25562577918F00984F45 /* User.swift in Sources */,
+				6C8011BA2577081100C2A364 /* signupVCViewController.swift in Sources */,
+				6C93BBF92577ABEF00B47F14 /* BikelistViewController.swift in Sources */,
+				6273FCB02582BF6D0067DA99 /* RentDetailsViewController.swift in Sources */,
+				6C8011A52576F51500C2A364 /* AppDelegate.swift in Sources */,
+				6C8011A72576F51500C2A364 /* SceneDelegate.swift in Sources */,
+				6C93BBFC2577AC4600B47F14 /* rentlistViewController.swift in Sources */,
+				6266F4D8258264EE0001A25A /* UpdateViewController.swift in Sources */,
+				6273FCAD2582AEB80067DA99 /* BikeDetailsViewController.swift in Sources */,
+				6273FCB32582CCB40067DA99 /* ContactViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6C8011AA2576F51500C2A364 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C8011AB2576F51500C2A364 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C8011AF2576F51F00C2A364 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C8011B02576F51F00C2A364 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C8011B32576F51F00C2A364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C8011B42576F51F00C2A364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C8011B62576F51F00C2A364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD801579FD4E79209F16C24 /* Pods-Bicycall.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QCF6XZSKY;
+				INFOPLIST_FILE = Bicycall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.Bicycall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C8011B72576F51F00C2A364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A932F21BE77DA16AA77E10 /* Pods-Bicycall.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QCF6XZSKY;
+				INFOPLIST_FILE = Bicycall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.Bicycall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C80119C2576F51500C2A364 /* Build configuration list for PBXProject "Bicycall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8011B32576F51F00C2A364 /* Debug */,
+				6C8011B42576F51F00C2A364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C8011B52576F51F00C2A364 /* Build configuration list for PBXNativeTarget "Bicycall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8011B62576F51F00C2A364 /* Debug */,
+				6C8011B72576F51F00C2A364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6CEDCC192578E5F5009847AA /* Bicycall.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6CEDCC1A2578E5F5009847AA /* Bicycall.xcdatamodel */,
+			);
+			currentVersion = 6CEDCC1A2578E5F5009847AA /* Bicycall.xcdatamodel */;
+			path = Bicycall.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6C8011992576F51500C2A364 /* Project object */;
+}

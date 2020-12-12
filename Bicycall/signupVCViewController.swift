@@ -15,15 +15,56 @@ class signupVCViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //widgets
+    var name: String?
+    
+  
+    @IBOutlet weak var txtLastname: UITextField!
+    
+    
+    @IBOutlet weak var txtName: UITextField!
+    
+    
+    @IBOutlet weak var txtEmail: UITextField!
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    
+    @IBOutlet weak var txtPasswordrepeat: UITextField!
+    
+    
+    @IBOutlet weak var txtPhone: UITextField!
+    
+    //Actions
+    
+    
+    @IBAction func btnSignup(_ sender: Any) {
+        performSegue(withIdentifier: "msignuplogin", sender: "nil")
+        
+        
     }
-    */
-
+    
+    @IBAction func btnLogin(_ sender: Any) {
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
