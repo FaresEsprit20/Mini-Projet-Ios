@@ -2,7 +2,7 @@
 //  signupVCViewController.swift
 //  Bicycall
 //
-//  Created by Jamil Joo on 2/12/2020.
+//  Created by Fares Ben Slama on 2/12/2020.
 //
 
 import UIKit
@@ -45,7 +45,15 @@ class signupVCViewController: UIViewController {
 
         
         print("hello")
-          if(txtPassword.text != txtPasswordrepeat.text) {
+        
+        if ( txtName.text!.isEmpty || txtLastname.text!.isEmpty || txtPhone.text!.isEmpty || txtEmail.text!.isEmpty || txtPassword.text!.isEmpty || txtPasswordrepeat.text!.isEmpty) {
+        
+            let alert = UIAlertController(title: "Register Failed", message: "Fields must not be empty", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+              
+          } else if((txtPassword.text != txtPasswordrepeat.text) ) {
               
               let alert = UIAlertController(title: "Register Failed", message: "Passwords Mismatch", preferredStyle: .alert)
               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -53,6 +61,19 @@ class signupVCViewController: UIViewController {
               self.present(alert, animated: true)
             print("passwords mismatch")
               
+          }else if(txtPhone.text!.count != 8  ) {
+                
+                let alert = UIAlertController(title: "Register Failed", message: "Phone must be 8 numbers", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+          
+          }else if(self.isValidEmail(txtEmail.text!) == false ) {
+                  
+                  let alert = UIAlertController(title: "Register Failed", message: "Email is not valid", preferredStyle: .alert)
+                  alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                  self.present(alert, animated: true)
           }else {
           
           //post
@@ -85,16 +106,16 @@ class signupVCViewController: UIViewController {
                           
                         let string = dataString as! String
                         print(string)
-                        if(string.elementsEqual("EXIST") == true  ){
-                             
+                        if(string.contains("EXIST") ){
+                             print("User exist already")
                               let alert = UIAlertController(title: "Register Failed", message: "User Already Exist", preferredStyle: .alert)
                               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                               alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                               self.present(alert, animated: true)
                             
                               
-                          }else if(string.elementsEqual("OK") == true){
-                          
+                          }else if(string.contains("OK")){
+                            print("User registred successfully")
                               let alert = UIAlertController(title: "Register Successful", message: "User Registred", preferredStyle: .alert)
                               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                               alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -115,6 +136,12 @@ class signupVCViewController: UIViewController {
     
 
     
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       

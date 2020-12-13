@@ -400,12 +400,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXL-TU-e6b">
-                                <rect key="frame" x="132" y="213" width="221" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fJ-KU-xFl">
                                 <rect key="frame" x="132" y="272" width="221" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -442,6 +436,12 @@
                                     <action selector="btnUpdate:" destination="pcs-2Q-h0e" eventType="touchUpInside" id="GrO-aw-WCA"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-TG-xOB">
+                                <rect key="frame" x="132" y="213" width="221" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bwa-9n-Hyy"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -449,7 +449,7 @@
                     <navigationItem key="navigationItem" title="Update Profile" id="wqx-LH-qmv"/>
                     <connections>
                         <outlet property="txtLastName" destination="7fJ-KU-xFl" id="peL-x9-3jl"/>
-                        <outlet property="txtName" destination="NHe-Dj-pDk" id="dpR-jt-Mfx"/>
+                        <outlet property="txtName" destination="TYd-TG-xOB" id="QLV-Rg-NK9"/>
                         <outlet property="txtPassword" destination="D1i-tb-PfE" id="Mig-0t-agX"/>
                         <outlet property="txtPasswordRepeat" destination="7fp-Qg-x5y" id="4qB-rO-RTD"/>
                         <outlet property="txtPhone" destination="jau-wn-QA6" id="SGc-NK-nvA"/>
@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUr-6Q-P9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1997" y="-106"/>
+            <point key="canvasLocation" x="1995.6521739130437" y="-106.47321428571428"/>
         </scene>
         <!--My Map View Controller-->
         <scene sceneID="pr0-Gr-7Tl">

@@ -2,7 +2,7 @@
 //  login.swift
 //  Bicycall
 //
-//  Created by Jamil Joo on 2/12/2020.
+//  Created by Fares Ben Slama  on 2/12/2020.
 //
 
 import UIKit
