@@ -11,8 +11,7 @@ import Kingfisher
 class BikelistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
 //widgets
-    
-    
+
     @IBOutlet weak var tableView: UITableView!{
         didSet {
             tableView.delegate = self
@@ -68,8 +67,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
             destination.type = bike.type
             destination.mprice = bike.price
             destination.image = bike.image
-            
-        
+                    
         }}
     
   

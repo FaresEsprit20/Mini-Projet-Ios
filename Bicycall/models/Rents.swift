@@ -27,6 +27,8 @@ class Rents: Codable {
     var type: String
     var price: String
     var image: String
+    var hours: String
+    var totalprice: String
     
     
 }

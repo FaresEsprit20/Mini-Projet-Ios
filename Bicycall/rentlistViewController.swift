@@ -76,7 +76,10 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
                             let type = item.type
                             let price = item.price
                             let image = item.image
-                            self!.rents.append(Rent(id: id ,date: datelocation, adresse: adresselocation,user: user, bike: bike,  model: model , type: type , price: price, image: image))
+                            let hours = item.hours
+                            let totalprice = item.totalprice
+                            
+                            self!.rents.append(Rent(id: id ,date: datelocation, adresse: adresselocation,user: user, bike: bike,  model: model , type: type , price: price, image: image , hours: hours , totalprice: totalprice))
                         }
                     for item in self!.rents {
                             print(item.location_id)
@@ -88,7 +91,10 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
                             print(item.type)
                             print(item.price)
                             print(item.image)
+                            print(item.hours)
+                            print(item.totalprice)
                         }
+                    
                     print(self!.rents)
                     DispatchQueue.main.async { [weak self] in
                         self?.tableView.reloadData()
@@ -188,9 +194,10 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
         
         let rent = sender as! Rent
         let destination = segue.destination as! RentDetailsViewController
+            destination.id = rent.location_id
             destination.datelocation = rent.datelocation
-       // destination.hours = rent
-       // destination.totalprice = rent
+            destination.hours = rent.hours
+            destination.totalprice = rent.totalprice
             destination.bikemodel = rent.model
             destination.biketype = rent.type
             destination.priceperhour = rent.price

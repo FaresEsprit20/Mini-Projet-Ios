@@ -2,7 +2,7 @@
 //  RentViewController.swift
 //  Bicycall
 //
-//  Created by Jamil Joo on 2/12/2020.
+//  Created by Fares Ben Slama on 12/12/2020.
 //
 
 import UIKit
@@ -23,6 +23,12 @@ class RentViewController: UIViewController {
     
     @IBAction func btnRentlist(_ sender: Any) {
     }
+    
+    
+    @IBAction func btnFavList(_ sender: Any) {
+        
+    }
+    
     
     
 }
