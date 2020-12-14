@@ -7,9 +7,10 @@ target 'Bicycall' do
 
   # Pods for Bicycall
 	pod 'Alamofire','~>5.2'
+  pod 'Kingfisher', '~> 5.0'
+
 end
 
-	pod 'MapboxNavigation', '~> 1.0.0'
 
 
 

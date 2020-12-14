@@ -13,6 +13,7 @@
 		6273FCB02582BF6D0067DA99 /* RentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */; };
 		6273FCB32582CCB40067DA99 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCB22582CCB40067DA99 /* ContactViewController.swift */; };
 		62C047392585849400503EC4 /* ConnectedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C047382585849300503EC4 /* ConnectedUser.swift */; };
+		62D5CC6125867F3F00A388FF /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D5CC6025867F3F00A388FF /* Bike.swift */; };
 		6C665643257F70A100E61BE1 /* myMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C665642257F70A100E61BE1 /* myMapViewController.swift */; };
 		6C8011A52576F51500C2A364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011A42576F51500C2A364 /* AppDelegate.swift */; };
 		6C8011A72576F51500C2A364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8011A62576F51500C2A364 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailsViewController.swift; sourceTree = "<group>"; };
 		6273FCB22582CCB40067DA99 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		62C047382585849300503EC4 /* ConnectedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedUser.swift; sourceTree = "<group>"; };
+		62D5CC6025867F3F00A388FF /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		6C665642257F70A100E61BE1 /* myMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myMapViewController.swift; sourceTree = "<group>"; };
 		6C8011A12576F51500C2A364 /* Bicycall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bicycall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8011A42576F51500C2A364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				6CDF25552577918F00984F45 /* User.swift */,
 				62C047382585849300503EC4 /* ConnectedUser.swift */,
+				62D5CC6025867F3F00A388FF /* Bike.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				62C047392585849400503EC4 /* ConnectedUser.swift in Sources */,
 				6CEDCC1B2578E5F5009847AA /* Bicycall.xcdatamodeld in Sources */,
 				6C8011A92576F51500C2A364 /* ViewController.swift in Sources */,
+				62D5CC6125867F3F00A388FF /* Bike.swift in Sources */,
 				6C93BBF62577A9B800B47F14 /* RentViewController.swift in Sources */,
 				6C8011BD2577269C00C2A364 /* login.swift in Sources */,
 				6C665643257F70A100E61BE1 /* myMapViewController.swift in Sources */,

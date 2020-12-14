@@ -103,10 +103,9 @@ class signupVCViewController: UIViewController {
                       
                       DispatchQueue.main.async {
                           
-                          
-                        let string = dataString as! String
-                        print(string)
-                        if(string.contains("EXIST") ){
+                        
+                        print(dataString)
+                        if(dataString.contains("EXIST") ){
                              print("User exist already")
                               let alert = UIAlertController(title: "Register Failed", message: "User Already Exist", preferredStyle: .alert)
                               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -114,7 +113,7 @@ class signupVCViewController: UIViewController {
                               self.present(alert, animated: true)
                             
                               
-                          }else if(string.contains("OK")){
+                          }else if(dataString.contains("OK")){
                             print("User registred successfully")
                               let alert = UIAlertController(title: "Register Successful", message: "User Registred", preferredStyle: .alert)
                               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

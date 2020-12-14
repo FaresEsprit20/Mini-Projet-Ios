@@ -10,7 +10,7 @@ import UIKit
 class BikeDetailsViewController: UIViewController {
 
     //vars
-
+    var id: Int?
     var model: String?
     var type: String?
     var mprice: String?
@@ -22,7 +22,9 @@ class BikeDetailsViewController: UIViewController {
         lbmodel.text = model!
         lbtype.text = type!
         Price.text = mprice!
-        bikeimage.image = UIImage(named: image!)
+        let url = URL(string: "http://localhost:3000/"+image!)
+    
+        bikeimage.kf.setImage(with: url)
         
     }
     

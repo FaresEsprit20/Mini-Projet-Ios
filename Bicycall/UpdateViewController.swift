@@ -135,11 +135,9 @@ class UpdateViewController: UIViewController {
                           
                           DispatchQueue.main.async {
                               
-                              
-                            let string = dataString as! String
-                            print(string)
+                            print(dataString)
                        
-                            if(string.contains("OK")){
+                            if(dataString.contains("OK")){
                                 self.saveUser()
                                 print("User updated successfully")
                                   let alert = UIAlertController(title: "Update Successful", message: "User Updated Successfully", preferredStyle: .alert)
