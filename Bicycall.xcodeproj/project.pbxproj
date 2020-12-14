@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		35A8F27C72A44C07D62090B7 /* Pods_Bicycall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899B1BA4D9682686062F6DE9 /* Pods_Bicycall.framework */; };
+		6216C50E258771BC00AE1057 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6216C50D258771BC00AE1057 /* Rent.swift */; };
+		6216C511258797BA00AE1057 /* Rents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6216C510258797BA00AE1057 /* Rents.swift */; };
 		6266F4D8258264EE0001A25A /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266F4D7258264EE0001A25A /* UpdateViewController.swift */; };
 		6273FCAD2582AEB80067DA99 /* BikeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */; };
 		6273FCB02582BF6D0067DA99 /* RentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6216C50D258771BC00AE1057 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
+		6216C510258797BA00AE1057 /* Rents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rents.swift; sourceTree = "<group>"; };
 		6266F4D7258264EE0001A25A /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetailsViewController.swift; sourceTree = "<group>"; };
 		6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				6CDF25552577918F00984F45 /* User.swift */,
 				62C047382585849300503EC4 /* ConnectedUser.swift */,
 				62D5CC6025867F3F00A388FF /* Bike.swift */,
+				6216C50D258771BC00AE1057 /* Rent.swift */,
+				6216C510258797BA00AE1057 /* Rents.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -265,8 +271,10 @@
 				6CDF25562577918F00984F45 /* User.swift in Sources */,
 				6C8011BA2577081100C2A364 /* signupVCViewController.swift in Sources */,
 				6C93BBF92577ABEF00B47F14 /* BikelistViewController.swift in Sources */,
+				6216C50E258771BC00AE1057 /* Rent.swift in Sources */,
 				6273FCB02582BF6D0067DA99 /* RentDetailsViewController.swift in Sources */,
 				6C8011A52576F51500C2A364 /* AppDelegate.swift in Sources */,
+				6216C511258797BA00AE1057 /* Rents.swift in Sources */,
 				6C8011A72576F51500C2A364 /* SceneDelegate.swift in Sources */,
 				6C93BBFC2577AC4600B47F14 /* rentlistViewController.swift in Sources */,
 				6266F4D8258264EE0001A25A /* UpdateViewController.swift in Sources */,

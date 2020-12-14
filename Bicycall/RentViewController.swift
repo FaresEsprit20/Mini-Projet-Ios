@@ -25,5 +25,4 @@ class RentViewController: UIViewController {
     }
     
     
-    
 }

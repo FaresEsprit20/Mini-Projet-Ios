@@ -577,6 +577,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bike List" id="tqO-Ph-CXs"/>
                     <connections>
+                        <outlet property="tableView" destination="5UQ-5j-XOU" id="Rdp-hM-W6i"/>
                         <segue destination="Kab-VY-IFB" kind="show" identifier="mBikeDetails" id="Wer-19-ppV"/>
                     </connections>
                 </viewController>
@@ -716,6 +717,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rent List" id="l9b-On-On7"/>
                     <connections>
+                        <outlet property="tableView" destination="vKs-Vg-JZR" id="YBS-6Y-IgB"/>
                         <segue destination="TZV-7N-fbW" kind="show" identifier="mRentDetails" id="Ybf-dd-WwC"/>
                     </connections>
                 </viewController>

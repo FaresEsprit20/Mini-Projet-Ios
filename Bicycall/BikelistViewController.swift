@@ -2,7 +2,7 @@
 //  BikelistViewController.swift
 //  Bicycall
 //
-//  Created by Fares Ben Slama on 2/12/2020.
+//  Created by Fares Ben Slama on 12/12/2020.
 //
 
 import UIKit
@@ -10,7 +10,17 @@ import Kingfisher
 
 class BikelistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
-
+//widgets
+    
+    
+    @IBOutlet weak var tableView: UITableView!{
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+    
+    
     var bikes =  [Bike]()
     
     
@@ -41,7 +51,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
         //cell OnclickListener
         
          func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let bike = bikes[indexPath.row]
+            let bike = self.bikes[indexPath.row]
             performSegue(withIdentifier: "mBikeDetails" , sender: bike) //passage de variable locale)
             
         }
@@ -74,7 +84,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
        return
        }
        let session = URLSession.shared
-       session.dataTask(with: url)  { ( data , response ,error) in
+       session.dataTask(with: url)  { [weak self] ( data , response ,error) in
            if let response = response {
                print(response)
            }
@@ -84,7 +94,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
                do
                {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as! [[String:Any]]
-                self.bikes.removeAll()
+                self!.bikes.removeAll()
                 
                 for item in json {
                     let id = item["bike_id"] as! Int
@@ -92,14 +102,17 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
                     let type = item["type"] as! String
                     let price = item["price"] as! String
                     let image = item["image"] as! String
-                    self.bikes.append(Bike(id: id,model: model,type: type,price: price,image: image))
+                    self!.bikes.append(Bike(id: id,model: model,type: type,price: price,image: image))
                 }
-                for item in self.bikes {
+                for item in self!.bikes {
                     print(item.image)
                     print("http://localhost:3000/"+item.image)
                     
                 }
-                print(self.bikes)
+                print(self!.bikes)
+                DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+                }
                }catch{
                    print(error)
                }
