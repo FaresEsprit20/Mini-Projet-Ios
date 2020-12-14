@@ -44,7 +44,8 @@ class BikeDetailsViewController: UIViewController {
     //actions
     
     @IBAction func btnRent(_ sender: Any) {
-        
+        let b = Bike(id: id!, model: model!, type: type!, price: mprice!, image: image!)
+        performSegue(withIdentifier: "mFavDetails" , sender: b)
     }
     
     
@@ -126,6 +127,16 @@ class BikeDetailsViewController: UIViewController {
               return movieExist
         }
     
+    /* prepare est pour passer les parametres  */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    
+    if segue.identifier == "mFinal" {
+    
+        let fav = sender as! Bike
+        let destination = segue.destination as! RentBikeViewController
+            destination.bike = fav.bike_id
+            destination.price = fav.price
+    }}
     
 
 }
