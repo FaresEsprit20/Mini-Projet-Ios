@@ -22,11 +22,11 @@ class RentBikeViewController: UIViewController {
     
     //widgets
     
-    @IBOutlet weak var txtHours: UILabel!
+    @IBOutlet weak var txtHours: UITextField!
     
-    @IBOutlet weak var txtDatelocation: UILabel!
+    @IBOutlet weak var txtAdresselocation: UITextField!
     
-    @IBOutlet weak var txtAdresselocation: UILabel!
+    @IBOutlet weak var txtDatelocation: UITextField!
     //actions
     
     @IBAction func btnRentBike(_ sender: Any) {
@@ -69,10 +69,13 @@ class RentBikeViewController: UIViewController {
                
                     print(data)
                     
-                            let alert = UIAlertController(title: "Success", message: "Rent Added Successfully , visit one of our shops and take your bike", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                            self.present(alert, animated: true)
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Success", message: "Rent Added Successfully , visit one of our shops and take your bike", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+            }
+                          
                 
             }
             

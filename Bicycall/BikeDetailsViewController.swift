@@ -45,7 +45,7 @@ class BikeDetailsViewController: UIViewController {
     
     @IBAction func btnRent(_ sender: Any) {
         let b = Bike(id: id!, model: model!, type: type!, price: mprice!, image: image!)
-        performSegue(withIdentifier: "mFavDetails" , sender: b)
+        performSegue(withIdentifier: "mFinal" , sender: b)
     }
     
     
