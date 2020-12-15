@@ -27,6 +27,7 @@ class RentBikeViewController: UIViewController {
     @IBOutlet weak var txtAdresselocation: UITextField!
     
     @IBOutlet weak var txtDatelocation: UITextField!
+    
     //actions
     
     @IBAction func btnRentBike(_ sender: Any) {
@@ -65,7 +66,7 @@ class RentBikeViewController: UIViewController {
                 print(response)
             }
             
-          if let data = data , let dataString = String(data: data, encoding: String.Encoding.utf8){
+          if let data = data {
                
                     print(data)
                     
