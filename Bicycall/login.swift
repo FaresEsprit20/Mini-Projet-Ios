@@ -18,6 +18,7 @@ class login: UIViewController {
     var phone:String?
     
     var u = ConnectedUser()
+    var BR = BaseUrl.baseUrl
     
     
     override func viewDidLoad() {
@@ -66,7 +67,7 @@ class login: UIViewController {
         
         //post
     
-        guard let url = URL(string: "http://localhost:3000/login") else {
+        guard let url = URL(string: BR+"/login") else {
         return
         }
         

@@ -14,8 +14,11 @@ class BikeDetailsViewController: UIViewController {
     var id: Int?
     var model: String?
     var type: String?
+    var shopTitle: String?
+    var shop: Int?
     var mprice: String?
     var image: String?
+    var BR = BaseUrl.baseUrl
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,8 @@ class BikeDetailsViewController: UIViewController {
         lbmodel.text = model!
         lbtype.text = type!
         Price.text = mprice!
-        let url = URL(string: "http://localhost:3000/"+image!)
+        lbshop.text = shopTitle!
+        let url = URL(string: BR+"/"+image!)
     
         bikeimage.kf.setImage(with: url)
         
@@ -32,19 +36,15 @@ class BikeDetailsViewController: UIViewController {
     //widgets
     
     @IBOutlet weak var bikeimage: UIImageView!
-    
     @IBOutlet weak var lbmodel: UILabel!
-    
     @IBOutlet weak var lbtype: UILabel!
-    
-    
     @IBOutlet weak var Price: UILabel!
-    
+    @IBOutlet weak var lbshop: UILabel!
     
     //actions
     
     @IBAction func btnRent(_ sender: Any) {
-        let b = Bike(id: id!, model: model!, type: type!, price: mprice!, image: image!)
+        let b = Bike(id: id!, model: model!, type: type!, price: mprice!, image: image! ,shop: shop!)
         performSegue(withIdentifier: "mFinal" , sender: b)
     }
     

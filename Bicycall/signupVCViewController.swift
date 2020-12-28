@@ -10,6 +10,8 @@ import CoreData
 
 class signupVCViewController: UIViewController {
 
+    var BR = BaseUrl.baseUrl
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,7 @@ class signupVCViewController: UIViewController {
     
     //widgets
     var name: String?
+    
     
   
     @IBOutlet weak var txtLastname: UITextField!
@@ -78,7 +81,7 @@ class signupVCViewController: UIViewController {
           
           //post
       
-          guard let url = URL(string: "http://localhost:3000/register/") else {
+          guard let url = URL(string: BR+"/register/") else {
           return
           }
           

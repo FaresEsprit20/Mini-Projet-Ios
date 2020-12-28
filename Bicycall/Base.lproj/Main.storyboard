@@ -263,7 +263,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deg-yo-pKf">
-                                <rect key="frame" x="266" y="275" width="93" height="119"/>
+                                <rect key="frame" x="266" y="275" width="99" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Contact" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
                                 <connections>
@@ -280,22 +280,30 @@
                                     <action selector="btnLogout:" destination="5xl-SX-00v" eventType="touchUpInside" id="ftZ-fx-Bda"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wJ-75-5kU">
-                                <rect key="frame" x="50" y="279" width="82" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Rent" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
-                                <connections>
-                                    <action selector="btnRent:" destination="5xl-SX-00v" eventType="touchUpInside" id="utD-7f-E6q"/>
-                                    <segue destination="3mi-MN-Wtc" kind="show" id="p2O-Mh-gH9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6y-Cm-lcC">
-                                <rect key="frame" x="155" y="425" width="105" height="94"/>
+                                <rect key="frame" x="155" y="499" width="105" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
                                 <connections>
                                     <action selector="btnUpdate:" destination="5xl-SX-00v" eventType="touchUpInside" id="O6i-ix-L8r"/>
                                     <segue destination="pcs-2Q-h0e" kind="show" id="AHN-Ua-Vxx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dd-24-Bmp">
+                                <rect key="frame" x="155" y="399" width="105" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Track" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
+                                <connections>
+                                    <action selector="btnTrack:" destination="5xl-SX-00v" eventType="touchUpInside" id="Enr-N1-IJz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wJ-75-5kU">
+                                <rect key="frame" x="58" y="279" width="100" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rent" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
+                                <connections>
+                                    <action selector="btnRent:" destination="5xl-SX-00v" eventType="touchUpInside" id="utD-7f-E6q"/>
+                                    <segue destination="3mi-MN-Wtc" kind="show" id="p2O-Mh-gH9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -561,7 +569,7 @@
                                 <state key="normal" title="Bike List" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
                                 <connections>
                                     <action selector="btnBikelist:" destination="3mi-MN-Wtc" eventType="touchUpInside" id="aE3-S7-3RB"/>
-                                    <segue destination="NGN-KR-z8u" kind="show" id="UcL-g5-GOS"/>
+                                    <segue destination="NGN-KR-z8u" kind="show" id="Mbe-HY-EsQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-Aq-qQA">
@@ -646,7 +654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6Z-ee-DWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139.130434782609" y="-808.25892857142856"/>
+            <point key="canvasLocation" x="2951" y="-777"/>
         </scene>
         <!--Rent Bike-->
         <scene sceneID="b2g-Fb-rOH">
@@ -766,7 +774,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM6-DM-T4w">
-                                <rect key="frame" x="102" y="542" width="210" height="30"/>
+                                <rect key="frame" x="102" y="568" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rent"/>
                                 <connections>
@@ -781,13 +789,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-Z3-Qtb">
-                                <rect key="frame" x="102" y="598" width="210" height="30"/>
+                                <rect key="frame" x="102" y="620" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add to Favourites"/>
                                 <connections>
                                     <action selector="btnFac:" destination="Kab-VY-IFB" eventType="touchUpInside" id="pdm-K0-YY7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3O-KM-AIf">
+                                <rect key="frame" x="38" y="516" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-w8-uZQ">
+                                <rect key="frame" x="171" y="515" width="141" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="045-bR-BlR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -797,13 +819,14 @@
                         <outlet property="Price" destination="6hW-1U-cw2" id="7kT-Bl-QBB"/>
                         <outlet property="bikeimage" destination="yLa-G5-fdn" id="Rcd-dV-qh6"/>
                         <outlet property="lbmodel" destination="eVQ-Ts-d5T" id="f0u-fM-54I"/>
+                        <outlet property="lbshop" destination="VMe-w8-uZQ" id="9gT-ax-2N9"/>
                         <outlet property="lbtype" destination="66q-6e-df6" id="ebE-du-sNu"/>
                         <segue destination="gwG-wI-fpI" kind="show" identifier="mFinal" id="JsR-aY-n8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tN4-wi-in3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962.3188405797105" y="-820.3125"/>
+            <point key="canvasLocation" x="3789.8550724637685" y="-777.45535714285711"/>
         </scene>
         <!--Rent List-->
         <scene sceneID="5aK-YP-i0k">
@@ -945,13 +968,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-uP-lTA">
-                                <rect key="frame" x="20" y="208" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Eg-CW-6LL">
                                 <rect key="frame" x="20" y="263" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -988,7 +1004,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q9-e7-ZfM">
-                                <rect key="frame" x="186" y="208" width="140" height="21"/>
+                                <rect key="frame" x="186" y="172" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -1029,8 +1045,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-JZ-mp4">
+                                <rect key="frame" x="20" y="213" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-uP-lTA">
+                                <rect key="frame" x="20" y="170" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCm-PN-XK5">
+                                <rect key="frame" x="186" y="213" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMv-re-Kez">
-                                <rect key="frame" x="120" y="585" width="174" height="40"/>
+                                <rect key="frame" x="120" y="631" width="174" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Delete"/>
@@ -1044,6 +1081,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rent Details" id="mLD-3f-o9v"/>
                     <connections>
+                        <outlet property="lbadresse" destination="fCm-PN-XK5" id="UKs-ik-unY"/>
                         <outlet property="lbbikemodel" destination="GsX-EM-ozO" id="m2N-qh-MJb"/>
                         <outlet property="lbbiketype" destination="Z2u-vM-j3A" id="0kX-Zz-Zj2"/>
                         <outlet property="lbdatelocation" destination="3Q9-e7-ZfM" id="xeD-Cv-poA"/>
@@ -1076,7 +1114,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0cr-H4-RW8"/>
+        <segue reference="2kx-J5-D45"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Baskel-logo" width="567" height="440"/>

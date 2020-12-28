@@ -22,6 +22,7 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
     
     var u = ConnectedUser()
     var rents =  [Rent]()
+    var BR = BaseUrl.baseUrl
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
         
         //post
     
-        guard let url = URL(string: "http://localhost:3000/locations") else {
+        guard let url = URL(string: BR+"/locations") else {
         return
         }
         
@@ -196,6 +197,7 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
         let destination = segue.destination as! RentDetailsViewController
             destination.id = rent.location_id
             destination.datelocation = rent.datelocation
+            destination.adresse = rent.adresselocation
             destination.hours = rent.hours
             destination.totalprice = rent.totalprice
             destination.bikemodel = rent.model

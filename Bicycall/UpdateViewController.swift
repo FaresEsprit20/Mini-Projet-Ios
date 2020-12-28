@@ -13,6 +13,7 @@ class UpdateViewController: UIViewController {
     //vars
     
     var u = ConnectedUser()
+    var BR = BaseUrl.baseUrl
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +83,7 @@ class UpdateViewController: UIViewController {
           
           //put query
             
-          guard let url = URL(string: "http://localhost:3000/user/update") else {
+          guard let url = URL(string: BR+"/user/update") else {
           return
           }
           

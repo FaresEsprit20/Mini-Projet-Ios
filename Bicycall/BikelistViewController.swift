@@ -9,7 +9,10 @@ import UIKit
 import Kingfisher
 
 class BikelistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
+
+    //vars
+    var BR = BaseUrl.baseUrl
+    var bikes =  [Bikes]()
 //widgets
 
     @IBOutlet weak var tableView: UITableView!{
@@ -20,7 +23,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    var bikes =  [Bike]()
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,13 +37,10 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
         let imageView = contentView?.viewWithTag(1) as! UIImageView
         let label = contentView?.viewWithTag(2) as! UILabel
         DispatchQueue.main.async {
-            
             label.text = self.bikes[indexPath.row].model
-            let url = URL(string: "http://localhost:3000/"+self.bikes[indexPath.row].image)
+            let url = URL(string: self.BR+"/"+self.bikes[indexPath.row].image)
             imageView.kf.setImage(with: url)
-       
         }
-       
         return cell!
     }
    
@@ -60,13 +60,15 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if segue.identifier == "mBikeDetails" {
         
-        let bike = sender as! Bike
+        let bike = sender as! Bikes
         let destination = segue.destination as! BikeDetailsViewController
             destination.id = bike.bike_id
             destination.model = bike.model
             destination.type = bike.type
             destination.mprice = bike.price
             destination.image = bike.image
+            destination.shop = bike.shop_id
+            destination.shopTitle = bike.title
                     
         }}
     
@@ -78,7 +80,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
 
         //get
       
-       guard let url = URL(string: "http://localhost:3000/bikes") else {
+       guard let url = URL(string: BR+"/bikes/sh") else {
        return
        }
        let session = URLSession.shared
@@ -100,11 +102,14 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
                     let type = item["type"] as! String
                     let price = item["price"] as! String
                     let image = item["image"] as! String
-                    self!.bikes.append(Bike(id: id,model: model,type: type,price: price,image: image))
+                    let title = item["title"] as! String
+                    let shop = item["shop_id"] as! Int
+                    
+                    self!.bikes.append(Bikes(id: id,model: model,type: type,price: price,image: image, shop: shop, title: title))
                 }
                 for item in self!.bikes {
                     print(item.image)
-                    print("http://localhost:3000/"+item.image)
+                    print(self!.BR+item.image)
                     
                 }
                 print(self!.bikes)

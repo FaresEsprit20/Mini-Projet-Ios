@@ -9,6 +9,8 @@ import UIKit
 
 class RentViewController: UIViewController {
 
+    var BR = BaseUrl.baseUrl
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -18,6 +18,7 @@ class RentBikeViewController: UIViewController {
     var totalprice: String?
    
     var u = ConnectedUser()
+    var BR = BaseUrl.baseUrl
     
     
     //widgets
@@ -34,7 +35,7 @@ class RentBikeViewController: UIViewController {
         
         //post
     
-        guard let url = URL(string: "http://localhost:3000/location/add") else {
+        guard let url = URL(string: BR+"/location/add") else {
         return
         }
         

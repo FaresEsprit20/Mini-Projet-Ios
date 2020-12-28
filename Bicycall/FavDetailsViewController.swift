@@ -16,6 +16,7 @@ class FavDetailsViewController: UIViewController {
     var type: String?
     var mprice: String?
     var image: String?
+    var BR = BaseUrl.baseUrl
     
     
     //widgets
@@ -43,7 +44,7 @@ class FavDetailsViewController: UIViewController {
         txtModel.text = model!
         txtType.text = type!
         txtPrice.text = mprice!
-        let url = URL(string: "http://localhost:3000/"+image!)
+        let url = URL(string: BR+"/"+image!)
     
         favImg.kf.setImage(with: url)
         

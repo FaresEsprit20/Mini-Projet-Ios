@@ -13,6 +13,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     //vars
     
     var favourites =  [Favourite]()
+    var BR = BaseUrl.baseUrl
     
     //widgets
     
@@ -54,7 +55,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
      
         DispatchQueue.main.async {
             label.text = self.favourites[indexPath.row].model
-            let url = URL(string: "http://localhost:3000/"+self.favourites[indexPath.row].image)
+            let url = URL(string: self.BR+"/"+self.favourites[indexPath.row].image)
             imageView.kf.setImage(with: url)
         }
             

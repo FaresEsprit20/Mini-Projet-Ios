@@ -7,14 +7,6 @@
 
 import Foundation
 
-//
-//  Rent.swift
-//  Bicycall
-//
-//  Created by Fares Ben Slama on 14/12/2020.
-//
-
-import Foundation
 
 class Rents: Codable {
     

@@ -13,17 +13,19 @@ class RentDetailsViewController: UIViewController {
 //vars
     var id : Int?
     var datelocation: String?
+    var adresse: String?
     var hours: String?
     var totalprice: String?
     var bikemodel: String?
     var biketype: String?
     var priceperhour: String?
-    
+    var BR = BaseUrl.baseUrl
     
 //widgets
     
     @IBOutlet weak var lbdatelocation: UILabel!
     
+    @IBOutlet weak var lbadresse: UILabel!
     @IBOutlet weak var lbhours: UILabel!
     
     @IBOutlet weak var lbtotalprice: UILabel!
@@ -34,12 +36,13 @@ class RentDetailsViewController: UIViewController {
     
     @IBOutlet weak var lbpriceperhour: UILabel!
     
-//actions
+  
+    //actions
     
     @IBAction func btnDelete(_ sender: Any) {
         
         
-        guard let url = URL(string: "http://localhost:3000/locations/delete") else {
+        guard let url = URL(string: BR+"/locations/delete") else {
         return
         }
         
@@ -86,6 +89,7 @@ class RentDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         lbdatelocation.text = datelocation!
+        lbadresse.text = adresse
         lbhours.text = hours!
         lbtotalprice.text = totalprice!
         lbbikemodel.text = bikemodel!
