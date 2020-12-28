@@ -22,9 +22,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    
-    
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bikes.count
@@ -43,8 +41,6 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         return cell!
     }
-   
-    
 
     //passage de parametres entre les controleurs
         //cell OnclickListener
