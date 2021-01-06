@@ -105,19 +105,52 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
                 for item in result {
                    
                     self.favourites.append(Favourite(bike_id: (item.value(forKey: "id")  as! Int), model: (item.value(forKey: "model")  as! String) , type: (item.value(forKey: "type")  as! String), price: (item.value(forKey: "price")  as! String), image: (item.value(forKey: "image")  as! String)))
-                  
                 }
-                
                    }
                    catch {
                    print("NO DATA FOUND , Error")
                    }
 
-
         }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            print("deleting ............")
+            deleteItem(index: favourites[indexPath.row].bike_id)
+            self.tableView.reloadData()
+        }
+    }
 
-
+    func deleteItem(index: Int) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //represente l'ORM
+        let persistentContainer = appDelegate.persistentContainer
+        let managedContext = persistentContainer.viewContext
+        
+        //la requete retourne un NSManagedObject
+        let request = NSFetchRequest<NSManagedObject>(entityName :   "Favourites")
+        let predicate = NSPredicate(format: "id = %d"  , index )
+        request.predicate = predicate
+        
+        do{
+        let result = try managedContext.fetch(request)
+        if result.count > 0 {
+         let obj = result[0] // NSManagedObject
+         managedContext.delete(obj)
+         print("Deleted Successfully")
+            let alert = UIAlertController(title: "Success", message: "Favourite Deleted Successfully", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
+        }
+        catch {
+        print("fetching error")
+        }
+        
+    }
+    
+    
     
     
 }
