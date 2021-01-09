@@ -8,6 +8,10 @@ target 'Bicycall' do
   # Pods for Bicycall
 	pod 'Alamofire','~>5.2'
   pod 'Kingfisher', '~> 5.0'
+  pod 'SideMenu'
+  pod 'TKSubmitTransition', :git => 'https://github.com/entotsu/TKSubmitTransition.git', :branch => 'swift4'
+  pod 'DatePicker', '1.0.0'
+  pod 'IQKeyboardManagerSwift', '6.0.4'
 
 end
 

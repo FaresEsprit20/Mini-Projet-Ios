@@ -61,13 +61,71 @@ class RecordListViewController: UIViewController , UITableViewDataSource, UITabl
           }
         }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("deleting ......")
+            deleteItem(index: records[indexPath.row].record_id)
+        }
+    }
  
+    func deleteItem(index:Int) {
+        
+        guard let url = URL(string: BR+"/records/delete") else {
+        return
+        }
+        
+        let bodyparameters = ["record_id": index ]
+       
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: bodyparameters, options: []) else {
+            return
+            }
+        request.httpBody = httpBody
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data,response,error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    //let json = try JSONSerialization.jsonObject(with: data, options: [])
+                   // print(json);
+                    DispatchQueue.main.async {
+                    print(data)
+                   
+                            let alert = UIAlertController(title: "Success", message: "Record Deleted Successfully", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                            self.present(alert, animated: true)
+                            
+                    }
+                }
+                
+            }
+            
+        }.resume()
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.DisplayConnectedUser()
-        
- 
-        
         
         //post
     

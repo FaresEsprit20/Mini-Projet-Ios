@@ -32,8 +32,6 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
             self.getRents()
         }*/
   
-    
-        
         //post
     
         guard let url = URL(string: BR+"/locations") else {
@@ -43,7 +41,6 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
         let bodyparameters = [ "user_id": self.u.user_id! , "name": self.u.name! , "lastname": self.u.lastname! , "email": self.u.email! , "password": self.u.password! , "phone": self.u.phone! ] as [String : Any]
         
        print(bodyparameters)
-        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -64,9 +61,7 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
                    // print(json);
                     print(data)
                     let rt = try JSONDecoder().decode([Rents].self, from: data)
-                
                         print(rt)
-                        
                         for item in rt {
                             let id = item.location_id
                             let adresselocation = item.adresselocation
@@ -114,19 +109,14 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
     }
     
     func DisplayConnectedUser() {
-            
              let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 //represente l'ORM
                 let persistentContainer = appDelegate.persistentContainer
-                
                 let managedContext = persistentContainer.viewContext     //retourne NSManagedObject toujours
-                
                 //la requete retourne un NSManagedObject
                 let request = NSFetchRequest<NSManagedObject>(entityName :   "Users")
-                
                 //execution de la requete
                 do {
-                
                     let result = try  managedContext.fetch(request)
                 for item in result {
                     print(item.value(forKey: "user_id") as! Int )
@@ -137,7 +127,6 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
                     self.u.name = (item.value(forKey: "name")  as! String)
                     self.u.lastname = (item.value(forKey: "lastname")  as! String)
                     self.u.phone = (item.value(forKey: "phone")  as! String)
-                   
                     print(self.u.user_id!)
                     print(self.u.email!)
                     print(self.u.password!)
@@ -151,7 +140,6 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
                    catch {
                    print("NO DATA FOUND , Error")
                    }
-
 
         }
     
@@ -179,20 +167,68 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
         return cell!
     }
   
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("deleting ..........")
+            deleteItem(index: rents[indexPath.row].location_id)
+        }
+    }
+    
+    
+    func deleteItem(index:Int){
+       
+        guard let url = URL(string: BR+"/locations/delete") else {
+        return
+        }
+        
+        let bodyparameters = ["location_id": index ]
+       
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: bodyparameters, options: []) else {
+            return
+            }
+        request.httpBody = httpBody
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data,response,error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    //let json = try JSONSerialization.jsonObject(with: data, options: [])
+                   // print(json);
+                    DispatchQueue.main.async {
+                    print(data)
+                   
+                            let alert = UIAlertController(title: "Success", message: "Rent Deleted Successfully", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                            self.present(alert, animated: true)
+                            
+                    }
+                }
+                
+            }
+            
+        }.resume()
+        
+    }
     
     //passage de parametres entre les controleurs
  
          func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let rent = self.rents[indexPath.row]
             performSegue(withIdentifier: "mRentDetails" , sender: rent) //passage de variable locale)
-            
         }
         
         /* prepare est pour passer les parametres  */
         override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         if segue.identifier == "mRentDetails" {
-        
         let rent = sender as! Rent
         let destination = segue.destination as! RentDetailsViewController
             destination.id = rent.location_id
@@ -203,7 +239,6 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
             destination.bikemodel = rent.model
             destination.biketype = rent.type
             destination.priceperhour = rent.price
-        
         }}
  
     
