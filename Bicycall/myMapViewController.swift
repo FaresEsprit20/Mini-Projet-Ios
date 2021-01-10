@@ -9,6 +9,21 @@ import UIKit
 import MapKit
 
 
+extension UIImage {
+    convenience init?(color: UIColor, size: CGSize = CGSize(width: 5, height: 5)) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
+    }
+}
+
+
 class myMapViewController: UIViewController, MKMapViewDelegate {
    
     
@@ -27,6 +42,8 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
                 return .yellow
             }
         }
+        
+        
     }
     
     struct Place {
@@ -35,6 +52,11 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
         let latitude: Double
         let longitude: Double
         let type: PlaceType
+        
+        var coordinate: CLLocationCoordinate2D {
+                CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            }
+    
     }
     
     
@@ -50,17 +72,74 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
     
     
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    /*func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
-        annotationView.markerTintColor = UIColor.blue
+        switch annotation.title!! {
+            case shop:
+                annotationView.markerTintColor = UIColor(red: (69.0/255), green: (95.0/255), blue: (170.0/255), alpha: 1.0)
+            case "Central Park":
+                annotationView.markerTintColor = UIColor(red: (52.0/255), green: (114.0/255), blue: (1.0/255), alpha: 1.0)
+            case "Empire State Building":
+                annotationView.markerTintColor = UIColor(red: (246.0/255), green: (233.0/255), blue: (212.0/255), alpha: 1.0)
+            case "Brooklyn Bridge":
+                annotationView.markerTintColor = UIColor(red: (146.0/255), green: (187.0/255), blue: (217.0/255), alpha: 1.0)
+            default:
+                annotationView.markerTintColor = UIColor.blue
+        }
+        
+        
+        //annotationView.markerTintColor = UIColor.blue
         return annotationView
+    }*/
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+          guard annotation is MKPointAnnotation else { return nil }
+
+          let identifier = "Annotation"
+          var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+          if let annotationView = annotationView {
+              annotationView.annotation = annotation
+          } else {
+              annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+              annotationView?.canShowCallout = true
+              if let place = places.first(where: { $0.title == annotation.title }) {
+                  annotationView?.image = UIImage(color: place.type.color)
+              }
+          }
+           return annotationView
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func addPlacesAnnotations() {
+          for place in places {
+              let pointAnnotation = MKPointAnnotation()
+              pointAnnotation.title = place.title
+              pointAnnotation.coordinate = place.coordinate
+            DispatchQueue.main.async {
+                self.myMap.addAnnotation(pointAnnotation)
+            }
+          }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
             self.myMap.delegate = self
             
+            self.getShops()
             self.getCircuits()
             self.getCyclists()
             self.getCommunities()
@@ -71,10 +150,8 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
         //communities.append(Community(id: 0, title: "community2", latitude: 35.427828 , longitude: 9.748186 ))
         //circuits.append(Circuit(id: 0, title: "circuit1", latitude: 33.773035 , longitude: 10.857805 ))
         //cyclists.append(Cyclist(id: 0, title: "cyclist1", latitude: 35.785118 , longitude: 10.000871 ))
-        createShopsAnnotations(locations: shops)
-        createCircuitsAnnotations(locations: circuits)
-        createCommunityAnnotations(locations: communities)
-        createCyclistsAnnotations(locations: cyclists)
+    
+   
         
     }
     
@@ -190,7 +267,7 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
                     print(item.latitude)
                     print(item.longitude)
                 }
-                self.createShopsAnnotations(locations: self.shops)
+                //self.createShopsAnnotations(locations: self.shops)
                 self.createPlacesAnnotations(locations: self.places)
               
                }catch{
@@ -241,7 +318,7 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
                     print(item.latitude)
                     print(item.longitude)
                 }
-                self.createCommunityAnnotations(locations: self.communities)
+                //self.createCommunityAnnotations(locations: self.communities)
                 self.createPlacesAnnotations(locations: self.places)
                
                }catch{
@@ -292,7 +369,7 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
                     print(item.latitude)
                     print(item.longitude)
                 }
-                self.createCircuitsAnnotations(locations: self.circuits)
+                //self.createCircuitsAnnotations(locations: self.circuits)
                 self.createPlacesAnnotations(locations: self.places)
                
                }catch{
@@ -331,7 +408,7 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
                     let title = item["title"] as! String
                     let latitude = item["latitude"] as! Double
                     let longitude = item["longitude"] as! Double
-                    self.cyclists.append(Cyclist(id: id, title: title, latitude: latitude , longitude: longitude))
+                    //self.cyclists.append(Cyclist(id: id, title: title, latitude: latitude , longitude: longitude))
                     self.places.append(Place(id: id, title: title, latitude: latitude , longitude: longitude, type: .cyclist))
                 }
                 
@@ -341,7 +418,7 @@ class myMapViewController: UIViewController, MKMapViewDelegate {
                     print(item.latitude)
                     print(item.longitude)
                 }
-                self.createCyclistsAnnotations(locations: self.cyclists)
+                //self.createCyclistsAnnotations(locations: self.cyclists)
                 self.createPlacesAnnotations(locations: self.places)
                }catch{
                    print(error)
