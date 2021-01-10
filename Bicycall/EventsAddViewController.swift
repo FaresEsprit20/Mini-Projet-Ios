@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 
+
 class EventsAddViewController: UIViewController {
 
     //vars
@@ -78,9 +79,7 @@ class EventsAddViewController: UIViewController {
   
     
     
-    
-    
-    
+
 
     func DisplayConnectedUser() {
             
@@ -118,4 +117,6 @@ class EventsAddViewController: UIViewController {
         }
     
 
+    
+    
 }
