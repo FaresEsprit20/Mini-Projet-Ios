@@ -53,7 +53,7 @@ class AddNewTravelViewController: UIViewController {
     @IBAction func saveBtnAction(_ sender: Any) {
         if (titleTextField.text?.count)! > 0{
             if (selectDateBtn.titleLabel?.text!.count)! > 0 {
-                self.SaveData()
+               
                 self.dismissVC()
             }
             else{
@@ -68,18 +68,7 @@ class AddNewTravelViewController: UIViewController {
     
     
     @IBAction func addImageBtnAction(_ sender: Any) {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
-            self.openCamera()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { _ in
-            self.openGallery()
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
+       
     }
     
     @IBAction func backBtnAction(_ sender: Any) {
@@ -106,59 +95,15 @@ class AddNewTravelViewController: UIViewController {
         noOfPeople.resignFirstResponder()
     }
     
-    //MARK: - Open the camera
-    func openCamera(){
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)){
-            imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.allowsEditing = true
-            imagePicker.delegate = self
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        else{
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
+ 
     
-    //MARK: - Open the gallery
-    func openGallery(){
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = self
-        self.present(imagePicker, animated: true, completion: nil)
-    }
+ 
     
     //MARK: - API Requests
-    func SaveData(){
-        let fileURL = helper.saveImageToDocumentDirectory(coverImage, Name:helper.generateRowId())
-        
-        var travelDict = [String:String]()
-        travelDict["id"] = helper.generateRowId();
-        travelDict["title"] = titleTextField.text
-        travelDict["venue"] = VenueTextField.text
-        travelDict["date"] = selectDateBtn.titleLabel?.text
-        travelDict["noOfPeople"] = noOfPeople.text
-        travelDict["tag"] = tagTextField.text
-        if fileURL.count > 0 {
-            travelDict["imagePath"] = fileURL
-        }
-        helper.insertNewTravelRecord(travel: travelDict)
-    }
+  
 }
 
-extension AddNewTravelViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    
-        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-            self.addImageBtn.setImage(editedImage, for: UIControl.State.normal)
-            self.coverImage = editedImage
-        }
-        //Dismiss the UIImagePicker after selection
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
+
 
 extension AddNewTravelViewController :UITextFieldDelegate{
 

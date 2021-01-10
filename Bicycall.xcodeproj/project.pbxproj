@@ -18,6 +18,11 @@
 		625FEA4B25881DBF00F9FFC7 /* RentBikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FEA4A25881DBF00F9FFC7 /* RentBikeViewController.swift */; };
 		625FEA522588320D00F9FFC7 /* RentX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FEA512588320D00F9FFC7 /* RentX.swift */; };
 		6266F4D8258264EE0001A25A /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266F4D7258264EE0001A25A /* UpdateViewController.swift */; };
+		6270BDCD25AB0BED00A24BE8 /* EventsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270BDCC25AB0BEC00A24BE8 /* EventsMenuViewController.swift */; };
+		6270BDD025AB0D8700A24BE8 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270BDCF25AB0D8700A24BE8 /* EventListViewController.swift */; };
+		6270BDD325AB0DDA00A24BE8 /* EventsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270BDD225AB0DDA00A24BE8 /* EventsAddViewController.swift */; };
+		6270BDD625AB0E2500A24BE8 /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270BDD525AB0E2500A24BE8 /* ParticipantsViewController.swift */; };
+		6270BDD925AB0F5400A24BE8 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270BDD825AB0F5400A24BE8 /* EventDetailsViewController.swift */; };
 		6273FCAD2582AEB80067DA99 /* BikeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */; };
 		6273FCB02582BF6D0067DA99 /* RentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */; };
 		6273FCB32582CCB40067DA99 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6273FCB22582CCB40067DA99 /* ContactViewController.swift */; };
@@ -70,6 +75,11 @@
 		625FEA4A25881DBF00F9FFC7 /* RentBikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentBikeViewController.swift; sourceTree = "<group>"; };
 		625FEA512588320D00F9FFC7 /* RentX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentX.swift; sourceTree = "<group>"; };
 		6266F4D7258264EE0001A25A /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		6270BDCC25AB0BEC00A24BE8 /* EventsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMenuViewController.swift; sourceTree = "<group>"; };
+		6270BDCF25AB0D8700A24BE8 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		6270BDD225AB0DDA00A24BE8 /* EventsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAddViewController.swift; sourceTree = "<group>"; };
+		6270BDD525AB0E2500A24BE8 /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
+		6270BDD825AB0F5400A24BE8 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		6273FCAC2582AEB80067DA99 /* BikeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetailsViewController.swift; sourceTree = "<group>"; };
 		6273FCAF2582BF6C0067DA99 /* RentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailsViewController.swift; sourceTree = "<group>"; };
 		6273FCB22582CCB40067DA99 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +207,11 @@
 				6286CAE9259A503700D8C191 /* RecordDetailsViewController.swift */,
 				6CA22B5325A8F6CC001FB292 /* MailViewController.swift */,
 				6CA22B5625A8F82E001FB292 /* SAButton.swift */,
+				6270BDCC25AB0BEC00A24BE8 /* EventsMenuViewController.swift */,
+				6270BDCF25AB0D8700A24BE8 /* EventListViewController.swift */,
+				6270BDD225AB0DDA00A24BE8 /* EventsAddViewController.swift */,
+				6270BDD525AB0E2500A24BE8 /* ParticipantsViewController.swift */,
+				6270BDD825AB0F5400A24BE8 /* EventDetailsViewController.swift */,
 			);
 			path = Bicycall;
 			sourceTree = "<group>";
@@ -370,6 +385,7 @@
 				62C047392585849400503EC4 /* ConnectedUser.swift in Sources */,
 				6C8AC42A25A7F73900C1348A /* Community.swift in Sources */,
 				6CEDCC1B2578E5F5009847AA /* Bicycall.xcdatamodeld in Sources */,
+				6270BDD325AB0DDA00A24BE8 /* EventsAddViewController.swift in Sources */,
 				6C8011A92576F51500C2A364 /* ViewController.swift in Sources */,
 				62D5CC6125867F3F00A388FF /* Bike.swift in Sources */,
 				6C93BBF62577A9B800B47F14 /* RentViewController.swift in Sources */,
@@ -397,16 +413,20 @@
 				6CA22B7125AA0213001FB292 /* DashBoardViewController.swift in Sources */,
 				625FEA412587F97A00F9FFC7 /* Favourite.swift in Sources */,
 				6C8011A72576F51500C2A364 /* SceneDelegate.swift in Sources */,
+				6270BDCD25AB0BED00A24BE8 /* EventsMenuViewController.swift in Sources */,
+				6270BDD925AB0F5400A24BE8 /* EventDetailsViewController.swift in Sources */,
 				6C93BBFC2577AC4600B47F14 /* rentlistViewController.swift in Sources */,
 				625FEA4B25881DBF00F9FFC7 /* RentBikeViewController.swift in Sources */,
 				6286CAE7259A4C2500D8C191 /* AddRecordViewController.swift in Sources */,
 				6C8AC42625A7F4DC00C1348A /* Circuit.swift in Sources */,
 				6286CAE4259A4A0700D8C191 /* TrackMenuViewController.swift in Sources */,
+				6270BDD025AB0D8700A24BE8 /* EventListViewController.swift in Sources */,
 				6286CAED259A75F100D8C191 /* Records.swift in Sources */,
 				62304942259A040800D8293C /* BaseUrl.swift in Sources */,
 				6266F4D8258264EE0001A25A /* UpdateViewController.swift in Sources */,
 				6C8AC42D25A7F7F700C1348A /* Cyclist.swift in Sources */,
 				6C8AC43325A8044500C1348A /* participants.swift in Sources */,
+				6270BDD625AB0E2500A24BE8 /* ParticipantsViewController.swift in Sources */,
 				6CA22B5425A8F6CC001FB292 /* MailViewController.swift in Sources */,
 				6CA22B7B25AA03BC001FB292 /* AddNewTravelViewController.swift in Sources */,
 				6273FCAD2582AEB80067DA99 /* BikeDetailsViewController.swift in Sources */,
