@@ -102,6 +102,9 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
                     let shop = item["shop_id"] as! Int
                     
                     self!.bikes.append(Bikes(id: id,model: model,type: type,price: price,image: image, shop: shop, title: title))
+                    if(id == 0 ){
+                        self?.bikes.removeAll()
+                    }
                 }
                 for item in self!.bikes {
                     print(item.image)

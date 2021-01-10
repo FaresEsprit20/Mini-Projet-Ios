@@ -74,10 +74,20 @@ class EventDetailsViewController: UIViewController {
     
     
     @IBAction func btnParticipants(_ sender: Any) {
-        
-        
+        let bike = Event(id: event_id! ,event_title: event_title! ,adress_evt: adresse_evt! ,date_evt: date_evt! ,time_evt: time_evt!, user: user!)
+        performSegue(withIdentifier: "mParticipants" , sender: bike) //passage de variable locale)
     }
-    
+   
+   
+   /* prepare est pour passer les parametres  */
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+   if segue.identifier == "mParticipants" {
+   let bike = sender as! Event
+   let destination = segue.destination as! ParticipantsViewController
+       destination.event_id = bike.event_id
+     }
+       
+   }
     
     override func viewDidLoad() {
         super.viewDidLoad()

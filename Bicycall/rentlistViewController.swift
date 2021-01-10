@@ -76,6 +76,9 @@ class rentlistViewController: UIViewController , UITableViewDataSource, UITableV
                             let totalprice = item.totalprice
                             
                             self!.rents.append(Rent(id: id ,date: datelocation, adresse: adresselocation,user: user, bike: bike,  model: model , type: type , price: price, image: image , hours: hours , totalprice: totalprice))
+                            if(id == 0 ){
+                                self?.rents.removeAll()
+                            }
                         }
                     for item in self!.rents {
                             print(item.location_id)

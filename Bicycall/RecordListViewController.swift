@@ -163,6 +163,11 @@ class RecordListViewController: UIViewController , UITableViewDataSource, UITabl
                             let user = item.user_id
                             
                             self!.records.append(Records(id: id, address: adresse, time: time, distance: distance, date: date, user: user))
+                            if(id == 0 ){
+                                self?.records.removeAll()
+                            }
+                            
+                            
                         }
                   
                     DispatchQueue.main.async { [weak self] in

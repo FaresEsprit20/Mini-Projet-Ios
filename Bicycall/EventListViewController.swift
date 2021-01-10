@@ -99,6 +99,9 @@ class EventListViewController: UIViewController ,UITableViewDelegate, UITableVie
                     let user  = item["user"] as! Int
                     
                     self.events.append(Event(id: id ,event_title: title ,adress_evt: adresse ,date_evt: date ,time_evt: time, user: user))
+                    if(id == 0 ){
+                        self.events.removeAll()
+                    }
                 }
                 
                 for item in self.events {
