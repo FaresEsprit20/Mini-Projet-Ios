@@ -43,12 +43,34 @@ class EventListViewController: UIViewController ,UITableViewDelegate, UITableVie
         return cell!
     }
     
+    //passage de parametres entre les controleurs
+        //cell OnclickListener
+        
+         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let bike = self.events[indexPath.row]
+            performSegue(withIdentifier: "EventDetails" , sender: bike) //passage de variable locale)
+        }
+        
+        /* prepare est pour passer les parametres  */
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "EventDetails" {
+        let bike = sender as! Event
+        let destination = segue.destination as! EventDetailsViewController
+            destination.event_id = bike.event_id
+            destination.event_title = bike.event_title
+            destination.adresse_evt = bike.adresse_evt
+            destination.date_evt = bike.date_evt
+            destination.time_evt = bike.time_evt
+            destination.user = bike.user
+          }
+            
+        }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
       
         self.DisplayConnectedUser()
-        
 
         //get
       
@@ -77,8 +99,6 @@ class EventListViewController: UIViewController ,UITableViewDelegate, UITableVie
                     let user  = item["user"] as! Int
                     
                     self.events.append(Event(id: id ,event_title: title ,adress_evt: adresse ,date_evt: date ,time_evt: time, user: user))
-                   
-                 
                 }
                 
                 for item in self.events {
