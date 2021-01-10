@@ -92,7 +92,7 @@ class BikelistViewController: UIViewController, UITableViewDataSource, UITableVi
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as! [[String:Any]]
                 self!.bikes.removeAll()
                 
-                for item in json {
+                for item in json  {
                     let id = item["bike_id"] as! Int
                     let model = item["model"] as! String
                     let type = item["type"] as! String
