@@ -12,16 +12,12 @@ import DatePicker
 class AddNewTravelViewController: UIViewController {
 
     //MARK: - UI Elements
-    @IBOutlet weak var coverImageBtn: UIButton!
-    @IBOutlet weak var titleTextField: UITextField!
+  
     @IBOutlet weak var formView: UIView!
-    @IBOutlet weak var VenueTextField: UITextField!
+    
     @IBOutlet weak var DateTextField: UITextField!
-    @IBOutlet weak var noOfPeople: UITextField!
-    @IBOutlet weak var addImageBtn: UIButton!
-    @IBOutlet weak var tagTextField: UITextField!
+
     @IBOutlet weak var saveBtn: UIButton!
-    var imagePicker = UIImagePickerController()
     let helper = HelperClass()
     var coverImage = UIImage()
     
@@ -29,54 +25,19 @@ class AddNewTravelViewController: UIViewController {
 
     //MARK: - View Setup Functions
     override func viewDidLoad() {
-        self.UIElementSetup()
+      
         super.viewDidLoad()
     }
     
-    func UIElementSetup() {
-        
-        // Setup for UI Elements
-        formView.layer.borderColor = UIColor.lightGray.cgColor
-        formView.layer.borderWidth = 0.5
-        formView.layer.cornerRadius = 10.0
-        
-        addImageBtn.layer.borderColor = UIColor.init(displayP3Red: 52.0/255.0, green: 55.0/255.0, blue: 72.0/255.0, alpha: 1.0).cgColor
-        addImageBtn.layer.borderWidth = 0.5
-        
-    }
+  
     
-    func dismissVC() {
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
-     //MARK: - Button Actions
-    @IBAction func saveBtnAction(_ sender: Any) {
-        if (titleTextField.text?.count)! > 0{
-            if (selectDateBtn.titleLabel?.text!.count)! > 0 {
-               
-                self.dismissVC()
-            }
-            else{
-                helper.showAlert(Message: "Please select a valid date", ViewController: self)
-            }
-        }
-        else{
-            helper.showAlert(Message: "Please select a title", ViewController: self)
-        }
-        
-    }
+
+  
     
     
-    @IBAction func addImageBtnAction(_ sender: Any) {
-       
-    }
-    
-    @IBAction func backBtnAction(_ sender: Any) {
-        dismissVC()
-    }
+ 
     
     @IBAction func selectDateBtnAction(_ sender: Any) {
-        self.resignAllResponser()
         let datePicker = DatePicker()
         datePicker.setup { (selected, date) in
             if selected, let selectedDate = date {
@@ -88,12 +49,7 @@ class AddNewTravelViewController: UIViewController {
         datePicker.display(in: self)
     }
     
-    func resignAllResponser() {
-        titleTextField.resignFirstResponder()
-        tagTextField.resignFirstResponder()
-        VenueTextField.resignFirstResponder()
-        noOfPeople.resignFirstResponder()
-    }
+   
     
  
     
