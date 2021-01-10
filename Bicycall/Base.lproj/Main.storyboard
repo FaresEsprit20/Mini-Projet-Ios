@@ -1572,7 +1572,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpn-T7-vZq">
-                                <rect key="frame" x="109" y="401" width="170" height="126"/>
+                                <rect key="frame" x="122" y="401" width="170" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Event" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
                             </button>
