@@ -1512,11 +1512,17 @@
                                 <rect key="frame" x="124" y="521" width="166" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Participate" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
+                                <connections>
+                                    <action selector="btnParticipate:" destination="3A2-0q-0SI" eventType="touchUpInside" id="FlD-9Y-lAU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYU-9B-3bA">
                                 <rect key="frame" x="124" y="619" width="166" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Participants" backgroundImage="white-button-png-15-clip-arts-and-logos-for-free-download-on-een-button-white-png-650_400-removebg-preview"/>
+                                <connections>
+                                    <action selector="btnParticipants:" destination="3A2-0q-0SI" eventType="touchUpInside" id="S0h-da-3IU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cll-kz-Zqr"/>
@@ -1524,8 +1530,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="1Dq-5z-klq"/>
                     <connections>
-                        <outlet property="btnParticipants" destination="fYU-9B-3bA" id="Hx9-RO-PuU"/>
-                        <outlet property="btnParticipate" destination="nGo-RK-N2j" id="AX6-S6-NNg"/>
                         <outlet property="txtAdress" destination="V55-dY-hYu" id="hOb-UM-iG8"/>
                         <outlet property="txtDate" destination="Wtw-Sk-0mK" id="7pK-QZ-a76"/>
                         <outlet property="txtTime" destination="hj6-Gx-5py" id="kMk-iK-Ugh"/>
