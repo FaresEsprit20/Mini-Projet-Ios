@@ -36,13 +36,48 @@ class EventDetailsViewController: UIViewController {
     
     @IBAction func btnParticipate(_ sender: Any) {
         
+        //post
+        guard let url = URL(string: BR+"/participate") else {
+        return
+        }
+        
+        let bodyparameters = ["event_id": event_id!,"user": user!] as [String : Any]
+       
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: bodyparameters, options: []) else{
+            return
+            }
+        request.httpBody = httpBody
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data,response,error) in
+            if let response = response {
+                print(response)
+            }
+            
+          if let data = data , let dataString = String(data: data, encoding: String.Encoding.utf8){
+                    print(data)
+                    DispatchQueue.main.async {
+                        print("Participate Successfully")
+                         let alert = UIAlertController(title: "Success", message: "Participation Added Successfully", preferredStyle: .alert)
+                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                         self.present(alert, animated: true)
+                      print(dataString)
+                    }
+            }
+            
+        }.resume()
         
     }
+    
     
     @IBAction func btnParticipants(_ sender: Any) {
         
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
