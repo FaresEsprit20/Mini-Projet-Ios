@@ -1,17 +1,10 @@
 {
   "images" : [
     {
-      "filename" : "event.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-help-50.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "icons8-help-100.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

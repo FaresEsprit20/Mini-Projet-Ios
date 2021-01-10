@@ -1494,7 +1494,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="htb-VT-Wij" id="6t5-To-qoa"/>
                                     <outlet property="delegate" destination="htb-VT-Wij" id="jaQ-Tr-tJG"/>
-                                    <outlet property="prefetchDataSource" destination="htb-VT-Wij" id="Uxq-Yi-Ik4"/>
+                                    <outlet property="prefetchDataSource" destination="htb-VT-Wij" id="rJe-c1-hzd"/>
                                 </connections>
                             </tableView>
                         </subviews>
